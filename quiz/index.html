@@ -1,37 +1,51 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <title>EME6208 - Assignment 2</title>
+    <meta charset="UTF-8">
   </head>
   
-  <body bgcolor="#055575">
-    <div align="left">
+  <body style="background-color: #055575">
+    <div style="text-align: left">
 
-    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+    <table style="border: 0; border-spacing: 0; padding: 0; width: 100%;">
       <tr>
-        <td width="50%"><form method="POST" name="instantquiz">
-          <table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <td style="width: 50%"><form method="POST" name="instantquiz">
+          <table style="border: 0; width: 100%; border-spacing: 0; padding:0;">
             <caption><strong>David's Quiz for Assignment 2</strong></caption>
             <tr>
-              <td width="100%"><div align="center"><center><p><textarea rows="10" name="thequestion"
-              cols="69" wrap="virtual"></textarea></td>
+              <td style="width: 100%"><div style="text-align: center"><p style="text-align: center"><textarea rows="10" name="thequestion" cols="69"></textarea></p></div></td>
             </tr>
-            <tr align="center">
-              <td width="50%"><div align="center"><center><p><strong>Solution: </strong><input
-              type="text" name="thesolution" size="35"></td>
+            <tr style="text-align: center">
+              <td style="width: 50%"><div style="text-align: center"><p><strong>Solution: </strong><input type="text" name="thesolution" size="35"></p></div></td>
             </tr>
-            <tr align="center">
-              <td width="100%"><div align="center"><center><p><strong>Your response:</strong> <select
-              name="theresponse" size="1" onChange="responses()">
-                <option value="-----">----</option>
-                <option value="a">a</option>
-                <option value="b">b</option>
-                <option value="c">c</option>
-                <option value="d">d</option>
-              </select> <input type="button" value="&lt;&lt;Back" name="B1"
-              onClick="if (whichone&gt;1){whichone--;generatequestions()}"> <input type="button"
-              value="Next&gt;&gt;" name="B2"
-              onClick="if (whichone&lt;=total){whichone++;generatequestions()}"><br><br><br>
-              <small><a href="#" onClick="whichone=1;generatequestions();return false">Start Over</a> </small><input
-              type="checkbox" name="cmode" value="ON"><small>Cheat Mode</small><hr><p align="center"><font face="arial" size="-2">This free quiz script provided by</font><br> <font face="arial, helvetica" size="-2"><a href="http://javascriptkit.com">JavaScript Kit</a></font></p></td>
+            <tr style="text-align: center">
+              <td style="width: 100%">
+                <div style="text-align: center">
+                  <p style="text-align: center">
+                    <strong>Your response:</strong>
+										<select name="theresponse" size="1" onChange="responses()">
+											<option value="-----">----</option>
+											<option value="a">a</option>
+											<option value="b">b</option>
+											<option value="c">c</option>
+											<option value="d">d</option>
+										</select>
+                		<input type="button" value="&lt;&lt;Back" name="B1" onClick="if (whichone&gt;1){whichone--;generatequestions()}">
+                		<input type="button" value="Next&gt;&gt;" name="B2" onClick="if (whichone&lt;=total){whichone++;generatequestions()}">
+                    <br><br><br>
+                    <small><a href="#" onClick="whichone=1;generatequestions();return false">Start Over</a> </small>
+                    <input type="checkbox" name="cmode" value="ON">
+                    <small>Cheat Mode</small>
+                  </p>
+                  <hr>
+                  <p style="text-align: center">
+										<span style="font-family: arial; font-size:smaller">This free quiz script provided by</span>
+										<br>
+										<span style="font-family: arial, helvetica; font-size: smaller"><a href="http://javascriptkit.com">JavaScript Kit</a></span>
+									</p>
+								</div>
+              </td>
             </tr>
           </table>
         </form>
@@ -50,7 +64,7 @@
     */
 
     </script>
-    <script language="JavaScript1.1">
+    <script>
     var whichone=1
     var tempmn=document.instantquiz.thequestion
     function generatequestions(){
