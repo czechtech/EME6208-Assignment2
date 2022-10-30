@@ -63,7 +63,7 @@ choice7[3]="Dover"
 choice7[4]="Tallahassee"
 
 question[8]="What is the capital of Delaware?"
-choice8[4]="Hartford"
+choice8[1]="Hartford"
 choice8[2]="Dover"
 choice8[3]="Tallahassee"
 choice8[4]="Atlanta"
